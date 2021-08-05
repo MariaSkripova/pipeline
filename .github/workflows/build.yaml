@@ -20,3 +20,8 @@ jobs:
       - name: Check formatting     
         run: |    
             pip install black
+            black . --check
+
+      - name: Running pytest
+        run: |
+            pytest pipeline/test_my_awesome_module.py
